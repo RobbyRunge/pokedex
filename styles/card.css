@@ -1,0 +1,42 @@
+.card {
+  margin: 40px;
+  background-color: #082029;
+  width: 240px;
+  border-radius: 16px;
+}
+
+.pokemon-header-name {
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon-picture-background {
+  height: 200px;
+  margin: 0;
+  background-color: greenyellow;
+
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 16px;
+}
+
+.pokemon-picture {
+  height: 136px;
+}
+
+.pokemon-footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  min-height: 48px;
+  background-color: #082029;
+  border-radius: 16px;
+}
+
+.pokemon-icon {
+  height: 32px;
+}
