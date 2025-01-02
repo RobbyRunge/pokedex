@@ -13,6 +13,14 @@ body {
   color: white;
 }
 
+.d-none {
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
 .ml-20 {
   margin-left: 20px;
 }

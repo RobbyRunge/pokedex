@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="./styles/standard.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/card.css" />
+    <link rel="stylesheet" href="./styles/overlay.css" />
+    <link rel="stylesheet" href="./styles/hover.css" />
 
     <script src="./script/script.js"></script>
   </head>
-  <body>
+  <body onload="init()">
     <header>
       <div class="logo ml-20">
         <img class="mr-20" src="./assets/img/pokeball.png" alt="" />
@@ -23,8 +25,23 @@
         <button onclick="">Search</button>
       </div>
     </header>
+    <div id="overlay" class="d-none" onclick="openOrCloseOverlay()">
+      <div class="overlay-card" onclick="event.stopPropagation()">
+        <div class="overlay-pokemon-header-name">
+          <h1>Bulbasaur</h1>
+        </div>
+        <div class="overlay-pokemon-picture-background">
+          <img class="overlay-pokemon-picture" src="./assets/img/pokeball.png" alt="" />
+        </div>
+        <div class="overlay-pokemon-footer-icons">
+          <img class="overlay-pokemon-icon" src="./assets/img/warning-pokemon.png" alt="" />
+          <img class="overlay-pokemon-icon" src="./assets/img/warning-pokemon.png" alt="" />
+        </div>
+      </div>
+    </div>
     <main id="content">
-      <div class="card">
+      <!-- add index by onclick function -->
+      <div class="card" onclick="openOrCloseOverlay()">
         <div class="pokemon-header-name">
           <h1>Bulbasaur</h1>
         </div>

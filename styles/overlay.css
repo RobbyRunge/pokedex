@@ -1,0 +1,56 @@
+#overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.overlay-card {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  background-color: #082029;
+  height: 480px;
+  width: 400px;
+  border-radius: 16px;
+}
+
+.overlay-pokemon-header-name {
+  height: 14%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-pokemon-picture-background {
+  height: 72%;
+  margin: 0;
+  background-color: greenyellow;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 16px;
+}
+
+.overlay-pokemon-picture {
+  height: 240px;
+}
+
+.overlay-pokemon-footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  height: 14%;
+  background-color: #082029;
+  border-radius: 16px;
+}
+
+.overlay-pokemon-icon {
+  height: 40px;
+}
