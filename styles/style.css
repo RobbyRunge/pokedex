@@ -1,0 +1,56 @@
+header {
+  height: 80px;
+  width: 100%;
+  background-color: #082029;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 32px;
+}
+
+main {
+  width: 100%;
+  background-color: #05171e;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  cursor: pointer;
+}
+
+.back-to-top img {
+  width: 64px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  background-color: #082029;
+}
+
+.creater {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.creater img {
+  height: 40px;
+}

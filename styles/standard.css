@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "Atma-Regular";
+  src: url("../assets/fonts/Atma-Regular.ttf") format("truetype");
+}
+
+* {
+  font-family: "Atma-Regular";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.d-none {
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}

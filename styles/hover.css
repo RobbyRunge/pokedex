@@ -1,0 +1,23 @@
+@media (hover: hover) {
+  .card {
+    cursor: pointer;
+  }
+  .card:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 8px #ffffff);
+  }
+  .pokemon-picture:hover {
+    filter: drop-shadow(0px -8px 16px #ffffff);
+    transform: scale(1.5);
+  }
+  .back-to-top:hover {
+    filter: drop-shadow(0px 0px 4px #ffffff);
+    transform: scale(1.05);
+  }
+}
+
+.pokemon-picture,
+.card,
+.back-to-top {
+  transition: all 0.3s;
+}

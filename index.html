@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    <link rel="shortcut icon" href="./assets/icons/icon-pokemon.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="./styles/standard.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/card.css" />
+    <link rel="stylesheet" href="./styles/overlay.css" />
+    <link rel="stylesheet" href="./styles/hover.css" />
+    <link rel="stylesheet" href="./styles/type-background.css" />
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/template.js"></script>
+    <script src="./scripts/overlay.js"></script>
+  </head>
+  <body onload="init()">
+    <header id="top">
+      <div class="logo ml-20">
+        <img class="mr-20" src="./assets/img/pokeball.png" alt="" />
+        <h1>Pokedex</h1>
+      </div>
+      <div class="search mr-20">
+        <input type="search" />
+        <button onclick="">Search</button>
+      </div>
+    </header>
+    <div id="overlay" class="d-none" onclick="openOrCloseOverlay()">
+      <div class="overlay-card" onclick="event.stopPropagation()">
+        <div class="overlay-pokemon-header-name">
+          <h1>Bulbasaur</h1>
+        </div>
+        <div class="overlay-pokemon-picture-background">
+          <img class="overlay-pokemon-picture" src="./assets/img/pokeball.png" alt="" />
+        </div>
+        <div class="overlay-pokemon-footer-icons">
+          <img class="overlay-pokemon-icon" src="./assets/img/warning-pokemon.png" alt="" />
+          <img class="overlay-pokemon-icon" src="./assets/img/warning-pokemon.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <main id="content"></main>
+    <div class="back-to-top">
+      <a href="#top"><img src="./assets/icons/go-top.png" alt="" /></a>
+    </div>
+
+    <footer>
+      <div class="creater">
+        <img src="./assets/img/warning-pokemon.png" alt="" />
+        <h2>Created by Robby</h2>
+        <img src="./assets/img/warning-pokemon.png" alt="" />
+      </div>
+    </footer>
+  </body>
+</html>
