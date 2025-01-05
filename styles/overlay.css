@@ -21,10 +21,11 @@
 }
 
 .overlay-pokemon-header-name {
-  height: 14%;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 14%;
+  gap: 16px;
 }
 
 .overlay-pokemon-picture-background {
@@ -49,6 +50,7 @@
   height: 14%;
   background-color: #082029;
   border-radius: 16px;
+  text-transform: uppercase;
 }
 
 .overlay-pokemon-icon {

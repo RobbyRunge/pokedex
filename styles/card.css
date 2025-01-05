@@ -1,6 +1,5 @@
 .card {
   margin: 40px;
-  background-color: #082029;
   width: 240px;
   border-radius: 16px;
   overflow: hidden;
@@ -10,6 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #0c3241;
   height: 48px;
   gap: 16px;
 }
@@ -41,7 +41,7 @@
   align-items: center;
   gap: 16px;
   min-height: 48px;
-  background-color: #082029;
+  background-color: #0c3241;
   text-transform: uppercase;
 }
 

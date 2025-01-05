@@ -28,25 +28,11 @@
         <button onclick="">Search</button>
       </div>
     </header>
-    <div id="overlay" class="d-none" onclick="openOrCloseOverlay()">
-      <div class="overlay-card" onclick="event.stopPropagation()">
-        <div class="overlay-pokemon-header-name">
-          <h1>Bulbasaur</h1>
-        </div>
-        <div class="overlay-pokemon-picture-background">
-          <img class="overlay-pokemon-picture" src="./assets/img/pokeball.png" alt="" />
-        </div>
-        <div class="overlay-pokemon-footer-icons">
-          <img class="overlay-pokemon-icon" src="./assets/img/warning-pokemon.png" alt="" />
-          <img class="overlay-pokemon-icon" src="./assets/img/warning-pokemon.png" alt="" />
-        </div>
-      </div>
-    </div>
+    <div id="overlay" class="d-none" onclick="openOrCloseOverlay(event)"></div>
     <main id="content"></main>
     <div class="back-to-top">
       <a href="#top"><img src="./assets/icons/go-top.png" alt="" /></a>
     </div>
-
     <footer>
       <div class="creater">
         <img src="./assets/img/warning-pokemon.png" alt="" />

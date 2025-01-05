@@ -1,12 +1,14 @@
-function openOrCloseOverlay() {
-  let overlayRef = document.getElementById('overlay');
-  // let currentPokemonRef = arrayPokemons[i];
-  if (overlayRef.classList.contains('d-none')) {
+function openOrCloseOverlay(i) {
+  const overlay = document.getElementById('overlay');
+
+  if (overlay.classList.contains('d-none')) {
+    overlay.innerHTML = getTemplateOverlay(arrayPokemons[i], i);
+    overlay.classList.remove('d-none');
     document.body.classList.add('no-scroll'); 
-    overlayRef.classList.remove('d-none');
   } else {
-    document.body.classList.remove('no-scroll'); 
-    overlayRef.classList.add('d-none');
+    overlay.classList.add('d-none');
+    overlay.innerHTML = '';
+    document.body.classList.remove('no-scroll');
   }
 }
 

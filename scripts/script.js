@@ -7,6 +7,7 @@ let arrayPokemons = [];
 async function init() {
   await fetchPokemons(limit, offset);
   renderPokemons();
+  renderDetailPokemonView();
 }
 
 async function fetchPokemons(limit, offset) {
