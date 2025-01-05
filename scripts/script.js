@@ -1,6 +1,6 @@
 const BASE_URL = 'https://pokeapi.co/api/v2/pokemon';
 let offset = 0;
-const limit = 24;
+const limit = 20;
 let currentPokemon = 0;
 let arrayPokemons = [];
 
@@ -36,7 +36,7 @@ function renderPokemons() {
   }
 }
 
-async function morePokemons() {
+async function addMorePokemons() {
   showLoadingSpinner(true); 
   try {
     offset += limit; 
@@ -47,6 +47,14 @@ async function morePokemons() {
   } finally {
     showLoadingSpinner(false);
   }
+}
+
+function getPokemonTypeData(pokemon) {
+  const type = pokemon.types[0].type.name;
+  const secondType = pokemon.types[1] ? pokemon.types[1].type.name : null;
+  const typeClass = `type-${type}`;
+  const secondTypeHTML = getTemplateOfSecondType(secondType);
+  return { type, secondType, typeClass, secondTypeHTML };
 }
 
 function showLoadingSpinner(show) {
