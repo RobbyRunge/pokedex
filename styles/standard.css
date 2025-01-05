@@ -22,6 +22,16 @@ body {
   color: white;
 }
 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gab-16 {
+  gap: 16px;
+}
+
 .d-none {
   display: none;
 }

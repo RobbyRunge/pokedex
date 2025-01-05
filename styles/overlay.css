@@ -6,7 +6,6 @@
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 2;
-  cursor: pointer;
 }
 
 .overlay-card {
@@ -15,26 +14,28 @@
   top: 50%;
   transform: translate(50%, -50%);
   background-color: #082029;
-  height: 480px;
-  width: 400px;
+  height: 560px;
+  width: 480px;
   border-radius: 16px;
 }
 
 .overlay-pokemon-header-name {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 14%;
   gap: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .overlay-pokemon-picture-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 72%;
   margin: 0;
   background-color: greenyellow;
-  display: flex;
-  justify-content: center;
-  align-items: end;
   padding-bottom: 16px;
 }
 
@@ -43,9 +44,8 @@
 }
 
 .overlay-pokemon-footer-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
   gap: 32px;
   height: 14%;
   background-color: #082029;

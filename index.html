@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./styles/overlay.css" />
     <link rel="stylesheet" href="./styles/hover.css" />
     <link rel="stylesheet" href="./styles/type-background.css" />
+    <link rel="stylesheet" href="./styles/loading-spinner.css" />
+    <link rel="stylesheet" href="./styles/assets.css" />
 
     <script src="./scripts/script.js"></script>
     <script src="./scripts/template.js"></script>
@@ -29,11 +31,28 @@
       </div>
     </header>
     <div id="overlay" class="d-none" onclick="openOrCloseOverlay(event)"></div>
+
     <main id="content"></main>
+
     <div class="back-to-top">
       <a href="#top"><img src="./assets/icons/go-top.png" alt="" /></a>
     </div>
-    <footer>
+
+    <div class="load-more-pokemons">
+      <button class="btn-load-more" onclick="morePokemons()">
+        <img src="./assets/icons/load.png" alt="" />
+      </button>
+    </div>
+
+    <div id="loading-spinner" class="d-none">
+      <div class="loadingio-eclipse">
+        <div class="ldio-rpinwye8j0b">
+          <div></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="center">
       <div class="creater">
         <img src="./assets/img/warning-pokemon.png" alt="" />
         <h2>Created by Robby</h2>

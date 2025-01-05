@@ -6,12 +6,8 @@
 }
 
 .pokemon-header-name {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #0c3241;
   height: 48px;
-  gap: 16px;
 }
 
 .current-pokemon {
@@ -21,13 +17,12 @@
 }
 
 .pokemon-picture-background {
-  height: 200px;
-  margin: 0;
-  background-color: greenyellow;
-
   display: flex;
   justify-content: center;
   align-items: end;
+  height: 200px;
+  margin: 0;
+  background-color: greenyellow;
   padding-bottom: 24px;
 }
 
@@ -36,10 +31,6 @@
 }
 
 .pokemon-footer-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
   min-height: 48px;
   background-color: #0c3241;
   text-transform: uppercase;

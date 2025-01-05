@@ -1,10 +1,12 @@
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
   height: 80px;
   width: 100%;
   background-color: #082029;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
 }
 
 .logo {
@@ -35,10 +37,29 @@ main {
   width: 64px;
 }
 
-footer {
+.load-more-pokemons {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+}
+
+.load-more-pokemons button {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 64px;
+  cursor: pointer;
+  background-color: #2e5780;
+  border: none;
+}
+
+.load-more-pokemons button img {
+  width: 48px;
+}
+
+footer {
   height: 80px;
   width: 100%;
   background-color: #082029;

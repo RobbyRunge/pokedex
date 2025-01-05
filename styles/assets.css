@@ -1,0 +1,20 @@
+.close-btn-overlay {
+  width: 32px;
+  cursor: pointer;
+}
+
+.arrow-position {
+  position: fixed;
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow-icon {
+  width: 32px;
+  cursor: pointer;
+}
+
+.rotation-arrow {
+  transform: rotate(180deg);
+}
