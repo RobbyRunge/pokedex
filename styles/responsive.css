@@ -1,0 +1,23 @@
+@media (max-width: 500px) {
+  .overlay-card {
+    height: 560px;
+    width: 90%;
+  }
+  .back-to-top img {
+    position: fixed;
+    bottom: 12px;
+    left: 12px;
+    width: 32px;
+    height: 32px;
+  }
+  .load-more-pokemons button {
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+  }
+  .load-more-pokemons button img {
+    width: 24px;
+  }
+}

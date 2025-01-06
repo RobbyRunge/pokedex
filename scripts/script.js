@@ -1,11 +1,12 @@
 const BASE_URL = 'https://pokeapi.co/api/v2/pokemon';
 let offset = 0;
 const limit = 20;
-let currentPokemon = 0;
+let currentPokemons = []; 
 let arrayPokemons = [];
 
 async function init() {
   await fetchPokemons(limit, offset);
+  currentPokemons = arrayPokemons;
   renderPokemons();
 }
 
@@ -66,4 +67,30 @@ function showLoadingSpinner(show) {
     spinner.classList.add('d-none');
     spinner.classList.remove('load-overlay')
   }
+}
+
+function searchPokemon() {
+  const query = document.getElementById('search-input').value.toLowerCase();
+  const filteredPokemons = arrayPokemons.filter(pokemon => pokemon.name.toLowerCase().includes(query));
+  renderFilteredPokemons(filteredPokemons);
+}
+
+function renderFilteredPokemons(pokemons) {
+  const content = document.getElementById('content');
+  content.innerHTML = '';
+  content.innerHTML = getTemplateResetButton()
+  if (pokemons.length === 0) {
+    content.innerHTML = '<p>No Pokémon found!</p>';
+    return;
+  }
+  for (let i = 0; i < pokemons.length; i++) {
+    const pokemon = pokemons[i];
+    content.innerHTML += getTemplateContentPokemon(pokemon, arrayPokemons.indexOf(pokemon));
+  }
+}
+
+function resetSearch() {
+  let reset = document.getElementById('reset');
+  currentPokemons = '';
+  renderPokemons();
 }

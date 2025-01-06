@@ -35,8 +35,6 @@
   align-items: center;
   height: 72%;
   margin: 0;
-  background-color: greenyellow;
-  padding-bottom: 16px;
 }
 
 .overlay-pokemon-picture {
@@ -45,10 +43,10 @@
 
 .overlay-pokemon-footer-icons {
   display: flex;
-  justify-content: space-between;
-  padding-left: 24px;
-  padding-right: 24px;
+  justify-content: center;
+  align-items: center;
   height: 14%;
+  gap: 80px;
   background-color: #082029;
   border-radius: 16px;
   text-transform: uppercase;

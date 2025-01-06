@@ -1,6 +1,7 @@
 .close-btn-overlay {
   width: 32px;
   cursor: pointer;
+  transform: rotate(90deg);
 }
 
 .arrow-position {
@@ -15,6 +16,6 @@
   cursor: pointer;
 }
 
-.rotation-arrow {
-  transform: rotate(180deg);
+.rotate {
+  rotate: 180deg;
 }

@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/card.css" />
     <link rel="stylesheet" href="./styles/overlay.css" />
+    <link rel="stylesheet" href="./styles/overlay-stats.css" />
     <link rel="stylesheet" href="./styles/hover.css" />
     <link rel="stylesheet" href="./styles/type-background.css" />
     <link rel="stylesheet" href="./styles/loading-spinner.css" />
     <link rel="stylesheet" href="./styles/assets.css" />
+    <link rel="stylesheet" href="./styles/responsive.css" />
 
     <script src="./scripts/script.js"></script>
     <script src="./scripts/template.js"></script>
@@ -26,8 +28,8 @@
         <h1>Pokedex</h1>
       </div>
       <div class="search mr-20">
-        <input type="search" />
-        <button onclick="">Search</button>
+        <input type="search" id="search-input" placeholder="Search Pokémon by name" />
+        <button onclick="searchPokemon()">Search</button>
       </div>
     </header>
     <div id="overlay" class="d-none" onclick="openOrCloseOverlay(event)"></div>

@@ -37,6 +37,28 @@ main {
   width: 64px;
 }
 
+.reset-search button img {
+  width: 48px;
+}
+
+.reset-search {
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+}
+
+.btn-reset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 64px;
+  background-color: #2e5780;
+  cursor: pointer;
+  border: none;
+}
+
 .load-more-pokemons {
   position: fixed;
   bottom: 24px;

@@ -15,6 +15,18 @@
     filter: drop-shadow(0px 0px 4px #ffffff);
     transform: scale(1.05);
   }
+  .reset-search:hover {
+    filter: drop-shadow(0px 0px 4px #ffffff);
+    transform: scale(1.05);
+  }
+  .arrow-icon:hover {
+    filter: drop-shadow(0px 0px 4px #ffffff);
+    transform: scale(1.1);
+  }
+  .close-btn-overlay:hover {
+    filter: drop-shadow(0px 0px 4px #ffffff);
+    transform: scale(1.05);
+  }
 }
 
 .card:hover {
@@ -24,6 +36,9 @@
 .pokemon-picture,
 .card,
 .back-to-top,
-.load-more-pokemons button {
+.load-more-pokemons button,
+.arrow-icon,
+.close-btn-overlay,
+.reset-search {
   transition: all 0.3s;
 }
