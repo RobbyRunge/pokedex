@@ -1,2 +1,1 @@
-This is the API, what i use
-API: https://pokeapi.co/
+This is the API, what i use: https://pokeapi.co/
