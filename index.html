@@ -28,8 +28,9 @@
         <h1>Pokedex</h1>
       </div>
       <div class="search mr-20">
-        <input type="search" id="search-input" placeholder="Search Pokémon by name" />
-        <button onclick="searchPokemon()">Search</button>
+        <p id="alert-empty-input" class="d-none alert-p-style"></p>
+        <input type="search" id="search-input" placeholder="Search Pokémon by name..." required />
+        <button onclick="alertEmptyInput(),searchPokemon()">Search</button>
       </div>
     </header>
     <div id="overlay" class="d-none" onclick="openOrCloseOverlay(event)"></div>
@@ -40,7 +41,7 @@
       <a href="#top"><img src="./assets/icons/go-top.png" alt="" /></a>
     </div>
 
-    <div class="load-more-pokemons">
+    <div id="load-more" class="load-more-pokemons">
       <button class="btn-load-more" onclick="addMorePokemons()">
         <img src="./assets/icons/load.png" alt="" />
       </button>

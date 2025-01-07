@@ -53,24 +53,6 @@ function getTemplateOverlay(pokemon, i) {
   `;
 }
 
-function getTemplateOfSecondType(secondType) {
-  if (!secondType) return '';
-  return `
-    <img class="pokemon-icon" src="./assets/icons/${secondType}.png" alt="${secondType}" />
-    <p><strong>${secondType}</strong></p>
-  `;
-}
-
-function getTemplateResetButton() {
-  return `
-    <div class="reset-search">
-      <button class="btn-reset" id="reset" onclick="resetSearch()">
-        <img src="./assets/icons/reset.png" alt="" />
-      </button>
-    </div>
-  `;
-}
-
 function getTemplateStats(pokemon, i) {
   const { type, typeClass, secondTypeHTML } = getPokemonTypeData(pokemon);
   return `
@@ -82,7 +64,7 @@ function getTemplateStats(pokemon, i) {
         <div>
           <h1 class="${typeClass} h1-second-page">${pokemon.name}</h1>
         </div>
-        <div>
+        <div class="responsive-btns">
           <img onclick="goToStartPage()" class="arrow-icon rotate" src="./assets/icons/arrow.png" alt="next" />
           <img class="close-btn-overlay" onclick="closeBtnOverlay()" src="./assets/icons/close.png" alt="close">
         </div>
@@ -91,6 +73,10 @@ function getTemplateStats(pokemon, i) {
         <div>
           <h2>Base Stats</h2>
           <table class="stats-table">
+            <tr>
+              <td><strong>Base Experience:</strong></td>
+              <td>${pokemon.base_experience}</td>
+            </tr>          
             <tr>
               <td><strong>Weight:</strong></td>
               <td>${pokemon.weight}</td>
@@ -137,5 +123,29 @@ function getTemplateStats(pokemon, i) {
         </div>` : ''}
       </div>
     </div>
+  `;
+}
+
+function getTemplateOfSecondType(secondType) {
+  if (!secondType) return '';
+  return `
+    <img class="pokemon-icon" src="./assets/icons/${secondType}.png" alt="${secondType}" />
+    <p><strong>${secondType}</strong></p>
+  `;
+}
+
+function getTemplateResetButton() {
+  return `
+    <div id="reset-btn" class="reset-search">
+      <button class="btn-reset" id="reset" onclick="resetSearch()">
+        <img class="reset-search-img" src="./assets/icons/reset.png" alt="" />
+      </button>
+    </div>
+  `;
+}
+
+function getTemplateNoPokemonFound() {
+  return `
+    <h1 class="nothing-found">No Pokémon found!</h1>
   `;
 }

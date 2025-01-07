@@ -1,3 +1,13 @@
+@media (max-width: 720px) {
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 160px;
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 500px) {
   .overlay-card {
     height: 560px;
@@ -19,5 +29,15 @@
   }
   .load-more-pokemons button img {
     width: 24px;
+  }
+}
+
+@media (max-width: 450px) {
+  .h1-second-page {
+    margin-left: 0;
+  }
+  .responsive-btns {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }

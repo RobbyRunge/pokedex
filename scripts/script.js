@@ -70,27 +70,69 @@ function showLoadingSpinner(show) {
 }
 
 function searchPokemon() {
-  const query = document.getElementById('search-input').value.toLowerCase();
+  const query = document.getElementById('search-input').value.trim().toLowerCase();
+  if (query.length < 3) {
+    alertEmptyInput();
+    return;
+  }
   const filteredPokemons = arrayPokemons.filter(pokemon => pokemon.name.toLowerCase().includes(query));
   renderFilteredPokemons(filteredPokemons);
 }
 
 function renderFilteredPokemons(pokemons) {
   const content = document.getElementById('content');
+  let inputField = document.getElementById('search-input');
+  let btnLoadMore = document.getElementById('load-more');
+  let btnReset = document.getElementById('reset-btn');
   content.innerHTML = '';
-  content.innerHTML = getTemplateResetButton()
+  if (btnLoadMore) {
+    btnLoadMore.classList.add('d-none');
+  }
+  if (!btnReset) {
+    content.innerHTML += getTemplateResetButton();
+  }
   if (pokemons.length === 0) {
-    content.innerHTML = '<p>No Pokémon found!</p>';
+    content.innerHTML += getTemplateNoPokemonFound();
+    inputField.value = '';
     return;
   }
   for (let i = 0; i < pokemons.length; i++) {
+    inputField.value = '';
     const pokemon = pokemons[i];
     content.innerHTML += getTemplateContentPokemon(pokemon, arrayPokemons.indexOf(pokemon));
   }
 }
 
+function alertEmptyInput() {
+  const inputField = document.getElementById('search-input').value.trim();
+  const alertElement = document.getElementById('alert-empty-input');
+  if (inputField.length < 3) {
+    alertElement.classList.remove('d-none'); 
+    alertElement.textContent = "Please enter at least 3 characters!"; 
+    setTimeout(displayNoneText, 2000);
+  } else {
+    alertElement.classList.add('d-none');
+  }
+}
+
+function displayNoneText() {
+  let alertTextRemove = document.getElementById('alert-empty-input');
+  alertTextRemove.classList.add('d-none');
+}
+
+
 function resetSearch() {
-  let reset = document.getElementById('reset');
-  currentPokemons = '';
+  const content = document.getElementById('content');
+  let inputField = document.getElementById('search-input');
+  let btnLoadMore = document.getElementById('load-more');
+  let btnReset = document.getElementById('reset-btn');
+  content.innerHTML = '';
+  if (btnLoadMore) {
+    btnLoadMore.classList.remove('d-none');
+  }
+  if (btnReset) {
+    btnReset.remove();
+  }
+  inputField.value = '';
   renderPokemons();
 }
