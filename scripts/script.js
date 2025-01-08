@@ -80,16 +80,15 @@ function searchPokemon() {
 }
 
 function renderFilteredPokemons(pokemons) {
-  const content = document.getElementById('content');
+  let content = document.getElementById('content');
   let inputField = document.getElementById('search-input');
   let btnLoadMore = document.getElementById('load-more');
-  let btnReset = document.getElementById('reset-btn');
+  let btnScrollTop = document.getElementById('scroll-top');
+  let btnReset = document.getElementById('reset');
   content.innerHTML = '';
   if (btnLoadMore) {
     btnLoadMore.classList.add('d-none');
-  }
-  if (!btnReset) {
-    content.innerHTML += getTemplateResetButton();
+    btnScrollTop.classList.add('d-none');
   }
   if (pokemons.length === 0) {
     content.innerHTML += getTemplateNoPokemonFound();
@@ -100,6 +99,8 @@ function renderFilteredPokemons(pokemons) {
     inputField.value = '';
     const pokemon = pokemons[i];
     content.innerHTML += getTemplateContentPokemon(pokemon, arrayPokemons.indexOf(pokemon));
+    btnReset.classList.remove('d-none');
+    btnReset.classList.add('nothing-found', 'design-btns');
   }
 }
 
@@ -135,4 +136,8 @@ function resetSearch() {
   }
   inputField.value = '';
   renderPokemons();
+}
+
+function scrollToTopFunction() {
+  document.documentElement.scrollTop = 0;
 }

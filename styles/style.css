@@ -1,12 +1,16 @@
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding-left: 24px;
-  padding-right: 24px;
   height: 80px;
   width: 100%;
   background-color: #082029;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
@@ -16,6 +20,10 @@ header {
 
 .logo img {
   height: 40px;
+}
+
+.input-button {
+  display: flex;
 }
 
 .search {
@@ -46,6 +54,13 @@ header {
 main {
   width: 100%;
   background-color: #05171e;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.main-section {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -124,11 +139,11 @@ footer {
 }
 
 .nothing-found {
-  font-size: 40px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 56px;
 }
 
 .alert-p-style {

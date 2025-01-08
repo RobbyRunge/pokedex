@@ -23,29 +23,32 @@
   </head>
   <body onload="init()">
     <header id="top">
-      <div class="logo ml-20">
-        <img class="mr-20" src="./assets/img/pokeball.png" alt="" />
-        <h1>Pokedex</h1>
-      </div>
-      <div class="search mr-20">
-        <p id="alert-empty-input" class="d-none alert-p-style"></p>
-        <input type="search" id="search-input" placeholder="Search Pokémon by name..." required />
-        <button onclick="alertEmptyInput(),searchPokemon()">Search</button>
-      </div>
+      <section class="header-section content-width">
+        <div class="logo ml-20">
+          <img class="mr-20" src="./assets/img/pokeball.png" alt="" />
+          <h1>Pokedex</h1>
+        </div>
+        <div class="search mr-20">
+          <div>
+            <p id="alert-empty-input" class="d-none alert-p-style"></p>
+          </div>
+          <div class="input-button">
+            <input type="search" id="search-input" placeholder="Search Pokémon by name..." required />
+            <button onclick="alertEmptyInput(),searchPokemon()">Search</button>
+          </div>
+        </div>
+      </section>
     </header>
     <div id="overlay" class="d-none" onclick="openOrCloseOverlay(event)"></div>
 
-    <main id="content"></main>
-
-    <div class="back-to-top">
-      <a href="#top"><img src="./assets/icons/go-top.png" alt="" /></a>
-    </div>
-
-    <div id="load-more" class="load-more-pokemons">
-      <button class="btn-load-more" onclick="addMorePokemons()">
-        <img src="./assets/icons/load.png" alt="" />
-      </button>
-    </div>
+    <main>
+      <section id="content" class="content-width main-section"></section>
+      <div class="position-btns">
+        <button class="design-btns" id="scroll-top" onclick="scrollToTopFunction()">Go to top</button>
+        <button class="design-btns" id="load-more" onclick="addMorePokemons()">Load more</button>
+        <button class="d-none" id="reset" onclick="resetSearch()">Reset</button>
+      </div>
+    </main>
 
     <div id="loading-spinner" class="d-none">
       <div class="loadingio-eclipse">

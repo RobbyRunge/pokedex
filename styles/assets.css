@@ -19,3 +19,23 @@
 .rotate {
   rotate: 180deg;
 }
+
+.position-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.design-btns {
+  width: 120px;
+  padding: 12px;
+  border-radius: 40px;
+  padding: 4px;
+  background-color: #2e5780;
+  color: white;
+  font-weight: bold;
+  border: 1px solid white;
+  cursor: pointer;
+}

@@ -41,6 +41,10 @@ body {
   align-items: center;
 }
 
+.content-width {
+  width: 1440px;
+}
+
 .gab-16 {
   gap: 16px;
 }

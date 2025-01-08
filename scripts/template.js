@@ -134,18 +134,17 @@ function getTemplateOfSecondType(secondType) {
   `;
 }
 
-function getTemplateResetButton() {
+function getTemplateNoPokemonFound() {
   return `
-    <div id="reset-btn" class="reset-search">
-      <button class="btn-reset" id="reset" onclick="resetSearch()">
-        <img class="reset-search-img" src="./assets/icons/reset.png" alt="" />
-      </button>
+    <div class="nothing-found">
+      <h1 class="nothing-found">No Pokémon found!</h1>
+      <button class="nothing-found design-btns" id="reset" onclick="resetSearch()">Reset</button>
     </div>
   `;
 }
 
-function getTemplateNoPokemonFound() {
+function getTemplateResetButton() {
   return `
-    <h1 class="nothing-found">No Pokémon found!</h1>
-  `;
+    
+  `
 }
