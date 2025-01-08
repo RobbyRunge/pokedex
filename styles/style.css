@@ -66,27 +66,6 @@ main {
   flex-wrap: wrap;
 }
 
-.back-to-top {
-  position: fixed;
-  bottom: 24px;
-  left: 24px;
-  cursor: pointer;
-}
-
-.back-to-top img {
-  width: 64px;
-}
-
-.reset-search-img {
-  width: 48px;
-}
-
-.reset-search {
-  position: fixed;
-  bottom: 24px;
-  right: 34px;
-}
-
 .btn-reset {
   display: flex;
   justify-content: center;
@@ -97,28 +76,6 @@ main {
   background-color: #2e5780;
   cursor: pointer;
   border: none;
-}
-
-.load-more-pokemons {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-}
-
-.load-more-pokemons button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 64px;
-  height: 64px;
-  border-radius: 64px;
-  cursor: pointer;
-  background-color: #2e5780;
-  border: none;
-}
-
-.load-more-pokemons button img {
-  width: 48px;
 }
 
 footer {

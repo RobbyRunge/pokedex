@@ -125,16 +125,15 @@ function displayNoneText() {
 function resetSearch() {
   const content = document.getElementById('content');
   let inputField = document.getElementById('search-input');
+  let btnReset = document.getElementById('reset');
   let btnLoadMore = document.getElementById('load-more');
-  let btnReset = document.getElementById('reset-btn');
+  let btnScrollTop = document.getElementById('scroll-top');
   content.innerHTML = '';
-  if (btnLoadMore) {
-    btnLoadMore.classList.remove('d-none');
-  }
-  if (btnReset) {
-    btnReset.remove();
-  }
   inputField.value = '';
+  btnReset.classList.remove('nothing-found', 'design-btns');
+  btnReset.classList.add('d-none');
+  if (btnLoadMore) btnLoadMore.classList.remove('d-none');
+  if (btnScrollTop) btnScrollTop.classList.remove('d-none');
   renderPokemons();
 }
 

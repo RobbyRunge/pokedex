@@ -142,9 +142,3 @@ function getTemplateNoPokemonFound() {
     </div>
   `;
 }
-
-function getTemplateResetButton() {
-  return `
-    
-  `
-}
