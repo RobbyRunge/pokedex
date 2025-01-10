@@ -24,6 +24,16 @@ function goToStartPage() {
   overlay.innerHTML = getTemplateOverlay(arrayPokemons[currentPokemon], currentPokemon);
 }
 
+function changeImage(direction) {
+  const overlay = document.getElementById('overlay');
+  if (direction === 'next') {
+    currentPokemon = (currentPokemon + 1) % arrayPokemons.length;
+  } else if (direction === 'prev') {
+    currentPokemon = (currentPokemon - 1 + arrayPokemons.length) % arrayPokemons.length;
+  }
+  overlay.innerHTML = getTemplateOverlay(arrayPokemons[currentPokemon], currentPokemon);
+}
+
 function closeBtnOverlay() {
   const overlay = document.getElementById('overlay');
   overlay.classList.add('d-none');

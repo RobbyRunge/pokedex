@@ -21,20 +21,23 @@ function getTemplateContentPokemon(pokemon, i) {
 function getTemplateOverlay(pokemon, i) {
   const { type, typeClass, secondTypeHTML } = getPokemonTypeData(pokemon);
   return `
-    <div class="overlay-card" onclick="stopBubbling(event)">
+    <div id="overlayId-${i}" class="overlay-card" onclick="stopBubbling(event)">
       <div class="overlay-pokemon-header-name">
         <div>
           <h1>#${i + 1}</h1>
         </div>
         <div>
-          <h1>${pokemon.name}</h1>
+          <h1 class="h1-second-page"">${pokemon.name}</h1>
         </div>
         <div>
+          <img onclick="goToStatsPage()" class="arrow-icon" src="./assets/icons/arrow.png" alt="next" />
           <img class="close-btn-overlay" onclick="closeBtnOverlay()" src="./assets/icons/close.png" alt="close">
         </div>
       </div>
       <div class="overlay-pokemon-picture-background ${typeClass}">
+        <img onclick="changeImage('prev', event)" class="arrow-icon rotate" src="./assets/icons/arrow2.png" alt="prev" />
         <img class="overlay-pokemon-picture" src="${pokemon.sprites.other['official-artwork'].front_default}" alt="${pokemon.name}" />
+        <img onclick="changeImage('next', event)" class="arrow-icon" src="./assets/icons/arrow2.png" alt="next" />        
       </div>
       <div class="overlay-pokemon-footer-icons">
         <div class="center gab-16">
@@ -47,7 +50,7 @@ function getTemplateOverlay(pokemon, i) {
         </div>` : ''}
       </div>
       <div class="arrow-position">
-        <img onclick="goToStatsPage()" class="arrow-icon" src="./assets/icons/arrow.png" alt="next" />
+        
       </div>
     </div>
   `;

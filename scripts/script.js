@@ -1,12 +1,11 @@
 const BASE_URL = 'https://pokeapi.co/api/v2/pokemon';
 let offset = 0;
-const limit = 20;
-let currentPokemons = []; 
+const limit = 10;
+let currentPokemon = 0;
 let arrayPokemons = [];
 
 async function init() {
   await fetchPokemons(limit, offset);
-  currentPokemons = arrayPokemons;
   renderPokemons();
 }
 
