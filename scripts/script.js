@@ -3,6 +3,7 @@ let offset = 0;
 const limit = 10;
 let currentPokemon = 0;
 let arrayPokemons = [];
+let filteredPokemonsArray = [];
 
 async function init() {
   await fetchPokemons(limit, offset);
@@ -74,8 +75,8 @@ function searchPokemon() {
     alertEmptyInput();
     return;
   }
-  const filteredPokemons = arrayPokemons.filter(pokemon => pokemon.name.toLowerCase().includes(query));
-  renderFilteredPokemons(filteredPokemons);
+  filteredPokemonsArray = arrayPokemons.filter(pokemon => pokemon.name.toLowerCase().includes(query));
+  renderFilteredPokemons(filteredPokemonsArray);
 }
 
 function renderFilteredPokemons(pokemons) {
@@ -97,7 +98,7 @@ function renderFilteredPokemons(pokemons) {
   for (let i = 0; i < pokemons.length; i++) {
     inputField.value = '';
     const pokemon = pokemons[i];
-    content.innerHTML += getTemplateContentPokemon(pokemon, arrayPokemons.indexOf(pokemon));
+    content.innerHTML += getTemplateContentPokemon(pokemon, i);
     btnReset.classList.remove('d-none');
     btnReset.classList.add('nothing-found', 'design-btns');
   }
@@ -131,6 +132,7 @@ function resetSearch() {
   inputField.value = '';
   btnReset.classList.remove('nothing-found', 'design-btns');
   btnReset.classList.add('d-none');
+  filteredPokemonsArray = [];
   if (btnLoadMore) btnLoadMore.classList.remove('d-none');
   if (btnScrollTop) btnScrollTop.classList.remove('d-none');
   renderPokemons();

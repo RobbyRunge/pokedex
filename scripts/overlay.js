@@ -1,11 +1,12 @@
 function openOrCloseOverlay(i) {
-  if (arrayPokemons[i]) {
-    currentPokemon = i;
+  const activeArray = filteredPokemonsArray.length > 0 ? filteredPokemonsArray : arrayPokemons;
+  currentPokemon = i;
+  if (activeArray[i]) {
     const overlay = document.getElementById('overlay');
     if (overlay.classList.contains('d-none')) {
-      overlay.innerHTML = getTemplateOverlay(arrayPokemons[i], i);
+      overlay.innerHTML = getTemplateOverlay(activeArray[i], i);
       overlay.classList.remove('d-none');
-      document.body.classList.add('no-scroll'); 
+      document.body.classList.add('no-scroll');
     } else {
       overlay.classList.add('d-none');
       overlay.innerHTML = '';
@@ -15,23 +16,26 @@ function openOrCloseOverlay(i) {
 }
 
 function goToStatsPage() {
+  const activeArray = filteredPokemonsArray.length > 0 ? filteredPokemonsArray : arrayPokemons;
   const overlay = document.getElementById('overlay');
-  overlay.innerHTML = getTemplateStats(arrayPokemons[currentPokemon], currentPokemon);
+  overlay.innerHTML = getTemplateStats(activeArray[currentPokemon], currentPokemon);
 }
 
 function goToStartPage() {
+  const activeArray = filteredPokemonsArray.length > 0 ? filteredPokemonsArray : arrayPokemons;
   const overlay = document.getElementById('overlay');
-  overlay.innerHTML = getTemplateOverlay(arrayPokemons[currentPokemon], currentPokemon);
+  overlay.innerHTML = getTemplateOverlay(activeArray[currentPokemon], currentPokemon);
 }
 
-function changeImage(direction) {
-  const overlay = document.getElementById('overlay');
+function nextOrPrevPokemon(direction) {
+  const activeArray = filteredPokemonsArray.length > 0 ? filteredPokemonsArray : arrayPokemons;
   if (direction === 'next') {
-    currentPokemon = (currentPokemon + 1) % arrayPokemons.length;
+    currentPokemon = (currentPokemon + 1) % activeArray.length;
   } else if (direction === 'prev') {
-    currentPokemon = (currentPokemon - 1 + arrayPokemons.length) % arrayPokemons.length;
+    currentPokemon = (currentPokemon - 1 + activeArray.length) % activeArray.length;
   }
-  overlay.innerHTML = getTemplateOverlay(arrayPokemons[currentPokemon], currentPokemon);
+  const overlay = document.getElementById('overlay');
+  overlay.innerHTML = getTemplateOverlay(activeArray[currentPokemon], currentPokemon);
 }
 
 function closeBtnOverlay() {

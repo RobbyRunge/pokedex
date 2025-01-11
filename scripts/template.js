@@ -35,9 +35,9 @@ function getTemplateOverlay(pokemon, i) {
         </div>
       </div>
       <div class="overlay-pokemon-picture-background ${typeClass}">
-        <img onclick="changeImage('prev', event)" class="arrow-icon rotate" src="./assets/icons/arrow2.png" alt="prev" />
+        <img onclick="nextOrPrevPokemon('prev')" class="arrow-icon rotate" src="./assets/icons/arrow2.png" alt="prev" />
         <img class="overlay-pokemon-picture" src="${pokemon.sprites.other['official-artwork'].front_default}" alt="${pokemon.name}" />
-        <img onclick="changeImage('next', event)" class="arrow-icon" src="./assets/icons/arrow2.png" alt="next" />        
+        <img onclick="nextOrPrevPokemon('next')" class="arrow-icon" src="./assets/icons/arrow2.png" alt="next" />        
       </div>
       <div class="overlay-pokemon-footer-icons">
         <div class="center gab-16">
