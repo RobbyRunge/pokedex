@@ -5,13 +5,6 @@ let currentPokemon = 0;
 let arrayPokemons = [];
 let filteredPokemonsArray = [];
 
-document.getElementById("search-input").addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    document.getElementById("search-btn").click();
-  }
-});
-
 async function init() {
   await fetchPokemons(limit, offset);
   renderPokemons();
@@ -76,41 +69,6 @@ function showLoadingSpinner(show) {
   }
 }
 
-function searchPokemon() {
-  const input = document.getElementById('search-input').value.trim().toLowerCase();
-  if (input.length < 3) {
-    alertEmptyInput();
-    return;
-  }
-  filteredPokemonsArray = arrayPokemons.filter(pokemon => pokemon.name.toLowerCase().includes(input));
-  renderFilteredPokemons(filteredPokemonsArray);
-}
-
-function renderFilteredPokemons(pokemons) {
-  let content = document.getElementById('content');
-  let inputField = document.getElementById('search-input');
-  let btnLoadMore = document.getElementById('load-more');
-  let btnScrollTop = document.getElementById('scroll-top');
-  let btnReset = document.getElementById('reset');
-  content.innerHTML = '';
-  if (btnLoadMore) {
-    btnLoadMore.classList.add('d-none');
-    btnScrollTop.classList.add('d-none');
-  }
-  if (pokemons.length === 0) {
-    content.innerHTML += getTemplateNoPokemonFound();
-    inputField.value = '';
-    return;
-  }
-  for (let i = 0; i < pokemons.length; i++) {
-    inputField.value = '';
-    const pokemon = pokemons[i];
-    content.innerHTML += getTemplateContentPokemon(pokemon, i);
-    btnReset.classList.remove('d-none');
-    btnReset.classList.add('nothing-found', 'design-btns');
-  }
-}
-
 function alertEmptyInput() {
   const inputField = document.getElementById('search-input').value.trim();
   const alertElement = document.getElementById('alert-empty-input');
@@ -126,23 +84,6 @@ function alertEmptyInput() {
 function displayNoneText() {
   let alertTextRemove = document.getElementById('alert-empty-input');
   alertTextRemove.classList.add('d-none');
-}
-
-
-function resetSearch() {
-  const content = document.getElementById('content');
-  let inputField = document.getElementById('search-input');
-  let btnReset = document.getElementById('reset');
-  let btnLoadMore = document.getElementById('load-more');
-  let btnScrollTop = document.getElementById('scroll-top');
-  content.innerHTML = '';
-  inputField.value = '';
-  btnReset.classList.remove('nothing-found', 'design-btns');
-  btnReset.classList.add('d-none');
-  filteredPokemonsArray = [];
-  if (btnLoadMore) btnLoadMore.classList.remove('d-none');
-  if (btnScrollTop) btnScrollTop.classList.remove('d-none');
-  renderPokemons();
 }
 
 function scrollToTopFunction() {
