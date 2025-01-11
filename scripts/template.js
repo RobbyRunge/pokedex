@@ -29,7 +29,7 @@ function getTemplateOverlay(pokemon, i) {
         <div>
           <h1 class="h1-second-page"">${pokemon.name}</h1>
         </div>
-        <div>
+        <div class="responsive-btns">
           <img onclick="goToStatsPage()" class="arrow-icon" src="./assets/icons/arrow.png" alt="next" />
           <img class="close-btn-overlay" onclick="closeBtnOverlay()" src="./assets/icons/close.png" alt="close">
         </div>

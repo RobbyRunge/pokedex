@@ -28,6 +28,10 @@
     filter: drop-shadow(0px 0px 4px #ffffff);
     transform: scale(1.05);
   }
+  .design-btns:hover {
+    filter: drop-shadow(0px 0px 4px #ffffff);
+    transform: scale(1.1);
+  }
 }
 
 .pokemon-picture,
@@ -36,6 +40,7 @@
 .load-more-pokemons button,
 .arrow-icon,
 .close-btn-overlay,
-.reset-search {
+.reset-search,
+.design-btns {
   transition: all 0.3s;
 }

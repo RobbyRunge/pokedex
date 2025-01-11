@@ -18,7 +18,7 @@
 @media (max-width: 500px) {
   .overlay-card {
     height: 560px;
-    width: 90%;
+    width: 98%;
   }
   .back-to-top img {
     position: fixed;
@@ -67,5 +67,11 @@
   }
   .search {
     margin-right: 0;
+  }
+  .overlay-pokemon-picture {
+    height: 200px;
+  }
+  .overlay-pokemon-picture-background {
+    gap: 8px;
   }
 }
