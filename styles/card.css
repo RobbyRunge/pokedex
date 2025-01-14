@@ -29,18 +29,10 @@
   padding-bottom: 24px;
 }
 
-.pokemon-picture {
-  height: 136px;
-}
-
 .pokemon-footer-icons {
   min-height: 48px;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
   background-color: #0c3241;
   text-transform: uppercase;
-}
-
-.pokemon-icon {
-  height: 32px;
 }

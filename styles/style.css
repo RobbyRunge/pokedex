@@ -13,19 +13,6 @@ header {
   align-items: center;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-  height: 40px;
-}
-
-.input-button {
-  display: flex;
-}
-
 .search {
   display: flex;
   align-items: center;
@@ -89,10 +76,6 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 16px;
-}
-
-.creater img {
-  height: 40px;
 }
 
 .nothing-found {

@@ -1,3 +1,37 @@
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.input-button {
+  display: flex;
+}
+
+.background-color-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #05171e;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.pokemon-icon {
+  height: 20px;
+}
+
+.pokemon-picture {
+  height: 136px;
+}
+
+.creater img {
+  height: 40px;
+}
+
 .close-btn-overlay {
   width: 32px;
   cursor: pointer;

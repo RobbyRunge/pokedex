@@ -11,8 +11,10 @@ function getTemplateContentPokemon(pokemon, i) {
       </div>
       <div class="pokemon-footer-icons center gab-16">
         <p><strong>${type}</strong></p>
-        <img class="pokemon-icon" src="./assets/icons/${type}.png" alt="${type}" />
-        ${secondTypeHTML}
+        <div class="background-color-icon">
+          <img class="pokemon-icon" src="./assets/icons/${type}.svg" alt="${type}" />
+        </div>
+        ${secondTypeHTML}        
       </div>
     </div>
   `;
@@ -42,15 +44,14 @@ function getTemplateOverlay(pokemon, i) {
       <div class="overlay-pokemon-footer-icons">
         <div class="center gab-16">
           <p><strong>${type}</strong></p>
-          <img class="overlay-pokemon-icon" src="./assets/icons/${type}.png" alt="${type}" />
+          <div class="background-color-icon">
+            <img class="pokemon-icon" src="./assets/icons/${type}.svg" alt="${type}" />
+          </div>
         </div>
         ${secondTypeHTML ? `
         <div class="center gab-16">
           ${secondTypeHTML}
         </div>` : ''}
-      </div>
-      <div class="arrow-position">
-        
       </div>
     </div>
   `;
@@ -118,7 +119,9 @@ function getTemplateStats(pokemon, i) {
       <div class="overlay-pokemon-footer-icons">
         <div class="center gab-16">
           <p><strong>${type}</strong></p>
-          <img class="overlay-pokemon-icon" src="./assets/icons/${type}.png" alt="${type}" >
+          <div class="background-color-icon">
+            <img class="pokemon-icon" src="./assets/icons/${type}.svg" alt="${type}" >
+          </div>
         </div>
         ${secondTypeHTML ? `
         <div class="center gab-16">
@@ -132,8 +135,10 @@ function getTemplateStats(pokemon, i) {
 function getTemplateOfSecondType(secondType) {
   if (!secondType) return '';
   return `
-    <img class="pokemon-icon" src="./assets/icons/${secondType}.png" alt="${secondType}" />
-    <p><strong>${secondType}</strong></p>
+    <div class="background-color-icon">
+      <img class="pokemon-icon" src="./assets/icons/${secondType}.svg" alt="${secondType}" />
+    </div>
+    <p><strong>${secondType}</strong></p>    
   `;
 }
 
