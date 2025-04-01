@@ -42,4 +42,5 @@ pokedex/
 
 ## <img src="https://cdn-icons-png.flaticon.com/512/18243/18243124.png" style="vertical-align: middle;" height="24" width="24"/> Authors
 - Robby Runge
-Feel free to customize this template further to better fit the specifics of your "pokedex" project.
+
+## Feel free to customize this template further to better fit the specifics of your "pokedex" project.
